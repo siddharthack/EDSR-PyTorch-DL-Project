@@ -63,3 +63,11 @@ Reports go to `outputs/resnet18_x1_all_splits/` and `outputs/resnet18_x1_combine
 ## Existing data and results
 
 Skip download/preparation if their outputs are already complete. Both scripts refuse to replace existing data by default; only add `--overwrite` if you intend to delete and regenerate their output folders. Results from this workflow are stored in `outputs/`, not `experiment/`.
+
+
+## ECA Feature Branch Addition:
+For a full training cycle of the EDSR-ECA model use:
+```
+python train_edsr_eca_x4_ucmerced.py --data-dir data/edsr_data
+```
+Add argument `--sparse-test` to it to only train the first two epochs on a small subset of the data to get an estimated for the training time.
